@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>😼💘</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+  <!-- Música de fundo -->
+  <audio autoplay loop>
+    <source src="/audio/musga.mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+
+  <div class="relative w-full max-w-xs sm:max-w-lg p-4 bg-white rounded-lg shadow-lg">
+    <!-- Botão de retroceder -->
+    <button id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 p-2 rounded-full">
+      👈
+    </button>
+
+    <!-- Cartão -->
+    <div class="flex flex-col items-center space-y-4">
+      <p id="card-text" class="text-center text-base sm:text-lg font-semibold"> Vai clicando no botãozinho ༼ つ ◕_◕ ༽</p>
+      <img id="card-image" src="/img/sogra.jpg" alt="Imagem 1" class="w-48 h-48 sm:w-64 sm:h-64 rounded-lg">
+    </div>
+
+    <!-- Botão de avançar -->
+    <button id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 p-2 rounded-full">
+      👉
+    </button>
+  </div>
+
+  <script>
+    const images = ["/img/argumentos.webp", "/img/ropa.jpg", "/img/bela.png", "/img/bonita.png", "/img/nerdmoji.jpg"];
+    const texts = ["Você é o CSS do meu HTML — sem você, eu fico todo bagunçado🌹", "👩‍💻Meu coração não é um ponteiro da linguagem C, mas aponta pra vc todo dia❤", "👨‍🔬Você deve ser feita de Berilio e Lantânio...Pq é muito:", "🤔Ou talvez seja feita de Boro, oxigênio, Niquel e Tântalo... já que é:", "Espero qu tenha gostado e, se não gostou, seja menos chata(●'◡'●) "];
+    let currentIndex = -1;
+
+    const imageElement = document.getElementById("card-image");
+    const textElement = document.getElementById("card-text");
+
+    document.getElementById("next-btn").addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      imageElement.src = images[currentIndex];
+      imageElement.alt = images[currentIndex];
+      textElement.textContent = texts[currentIndex];
+    });
+
+    document.getElementById("prev-btn").addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      imageElement.src = images[currentIndex];
+      textElement.textContent = texts[currentIndex];
+    });
+  </script>
+</body>
+</html>
