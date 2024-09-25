@@ -9,7 +9,7 @@
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
   <!-- Música de fundo -->
   <audio autoplay loop>
-    <source src="/audio/musga.mp3" type="audio/mpeg">
+    <source src="audio/musga.mp3" type="audio/mpeg">
     Seu navegador não suporta o elemento de áudio.
   </audio>
 
@@ -32,7 +32,7 @@
   </div>
 
   <script>
-    const images = ["/img/argumentos.webp", "/img/ropa.jpg", "/img/bela.png", "/img/bonita.png", "/img/nerdmoji.jpg"];
+    const images = ["img/argumentos.webp", "img/ropa.jpg", "img/bela.png", "img/bonita.png", "img/nerdmoji.jpg"];
     const texts = ["Você é o CSS do meu HTML — sem você, eu fico todo bagunçado🌹", "👩‍💻Meu coração não é um ponteiro da linguagem C, mas aponta pra vc todo dia❤", "👨‍🔬Você deve ser feita de Berilio e Lantânio...Pq é muito:", "🤔Ou talvez seja feita de Boro, oxigênio, Niquel e Tântalo... já que é:", "Espero qu tenha gostado e, se não gostou, seja menos chata(●'◡'●) "];
     let currentIndex = -1;
 
@@ -52,5 +52,6 @@
       textElement.textContent = texts[currentIndex];
     });
   </script>
+  
 </body>
 </html>
